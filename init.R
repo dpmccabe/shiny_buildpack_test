@@ -1,26 +1,32 @@
-list.files("/app/packrat/src", all.files = T, full.names = T, recursive = T)
-stop()
+# list.files("/app/packrat/src", all.files = T, full.names = T, recursive = T)
+# stop()
 
-install.packages("devtools", INSTALL_opts = "--no-docs --no-help --no-demo")
+# install.packages("devtools", INSTALL_opts = "--no-docs --no-help --no-demo")
 
 pkgs <- as.data.frame(read.dcf("/app/packrat/packrat.lock")[-1, , drop = FALSE])
 
 for (i in 1:nrow(pkgs)) {
   pkg <- pkgs[i, ]
 
-  message("Trying to install ", pkg$Package, " from Packrat src")
+  message("Trying to install ", pkg$Package)
 
   if (pkg$Package %in% rownames(installed.packages())) {
     message(pkg$Package, " is already installed")
   } else if (pkg$Source == "CRAN") {
-    devtools::install_local(
-      file.path("/app/packrat/src", pkg$Package, paste0(pkg$Package, "_", pkg$Version, ".tar.gz")),
-      INSTALL_opts = "--no-docs --no-help --no-demo"
-    )
+    f <- file.path("/app/packrat/src", pkg$Package, paste0(pkg$Package, "_", pkg$Version, ".tar.gz"))
+    message("...from ", f)
+
+    # devtools::install_local(
+    #   f,
+    #   INSTALL_opts = "--no-docs --no-help --no-demo"
+    # )
   } else if (pkg$Source == "github") {
-    devtools::install_local(
-      file.path("/app/packrat/src", pkg$Package, paste0(pkg$GithubSha1, ".tar.gz")),
-      INSTALL_opts = "--no-docs --no-help --no-demo"
-    )
+    f <- file.path("/app/packrat/src", pkg$Package, paste0(pkg$GithubSha1, ".tar.gz"))
+    message("...from ", f)
+
+    # devtools::install_local(
+    #   f,
+    #   INSTALL_opts = "--no-docs --no-help --no-demo"
+    # )
   }
 }
