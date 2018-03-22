@@ -9,12 +9,12 @@ for (i in 1:nrow(pkgs)) {
     message(pkg$Package, " is already installed")
   } else if (pkg$Source == "CRAN") {
     devtools::install_local(
-      file.path("packrat/src", pkg$Package, paste0(pkg$Package, "_", pkg$Version, ".tar.gz")),
+      file.path("app/packrat/src", pkg$Package, paste0(pkg$Package, "_", pkg$Version, ".tar.gz")),
       INSTALL_opts = "--no-docs --no-help --no-demo"
     )
   } else if (pkg$Source == "github") {
     devtools::install_local(
-      file.path("packrat/src", pkg$Package, paste0(pkg$GithubSha1, ".tar.gz")),
+      file.path("app/packrat/src", pkg$Package, paste0(pkg$GithubSha1, ".tar.gz")),
       INSTALL_opts = "--no-docs --no-help --no-demo"
     )
   }
