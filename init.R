@@ -1,5 +1,3 @@
-file.remove(".Rprofile")
-
 install.packages("github")
 
 pkgs <- as.data.frame(read.dcf("packrat/packrat.lock")[-1, , drop = FALSE])
