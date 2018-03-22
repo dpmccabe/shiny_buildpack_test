@@ -1,4 +1,7 @@
-install.packages("devtools")
+list.files("/app/packrat/src", all.files = T, full.names = T, recursive = T)
+stop()
+
+install.packages("devtools", INSTALL_opts = "--no-docs --no-help --no-demo")
 
 pkgs <- as.data.frame(read.dcf("/app/packrat/packrat.lock")[-1, , drop = FALSE])
 
