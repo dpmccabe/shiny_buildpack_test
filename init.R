@@ -1,4 +1,4 @@
-install.packages("github")
+install.packages("devtools")
 
 pkgs <- as.data.frame(read.dcf("app/packrat/packrat.lock")[-1, , drop = FALSE])
 
