@@ -8,14 +8,15 @@ for (i in 1:nrow(pkgs)) {
   if (pkg$Package %in% rownames(installed.packages())) {
     message(pkg$Package, " is already installed")
   } else if (pkg$Source == "CRAN") {
-    install_local(
+    devtools::install_local(
       file.path("packrat/src", pkg$Package, paste0(pkg$Package, "_", pkg$Version, ".tar.gz")),
       INSTALL_opts = "--no-docs --no-help --no-demo"
     )
   } else if (pkg$Source == "github") {
-    install_github(
+    devtools::install_github(
       file.path(pkg$GithubUsername, pkg$GithubRepo),
-      ref = pkg$GithubRef
+      ref = pkg$GithubRef,
+      INSTALL_opts = "--no-docs --no-help --no-demo"
     )
   }
 }
