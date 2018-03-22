@@ -15,7 +15,6 @@ for (i in 1:nrow(pkgs)) {
     install.packages(
       f,
       type = "source",
-      repos = NULL,
       INSTALL_opts = "--no-docs --no-help --no-demo"
     )
   } else if (pkg$Source == "github") {
@@ -26,10 +25,7 @@ for (i in 1:nrow(pkgs)) {
     install.packages(
       f,
       type = "source",
-      repos = NULL,
       INSTALL_opts = "--no-docs --no-help --no-demo"
     )
   }
 }
-
-# stop()
