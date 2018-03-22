@@ -1,6 +1,6 @@
 install.packages("github")
 
-pkgs <- as.data.frame(read.dcf("packrat/packrat.lock")[-1, , drop = FALSE])
+pkgs <- as.data.frame(read.dcf("app/packrat/packrat.lock")[-1, , drop = FALSE])
 
 for (i in 1:nrow(pkgs)) {
   pkg <- pkgs[i, ]
