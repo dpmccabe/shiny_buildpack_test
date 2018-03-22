@@ -4,4 +4,3 @@
 .Rbuildignore
 .Rhistory
 packrat/lib*/
-.Rprofile
