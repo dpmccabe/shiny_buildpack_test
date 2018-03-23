@@ -4,7 +4,7 @@ print(getwd())
 list.files(getwd(), all.files = T, full.names = T, include.dirs = T)
 list.files("/usr/bin", all.files = T, full.names = T, include.dirs = T)
 
-install.packages("Rcpp")
+install.packages("dply")
 stop(0)
 
 pkgs <- as.data.frame(read.dcf("/app/packrat/packrat.lock")[-1, , drop = FALSE])
