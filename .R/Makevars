@@ -1,4 +1,4 @@
-CCACHE=./usr/bin/ccache
+CCACHE=/usr/bin/ccache
 CC=$(CCACHE) gcc
 CXX=$(CCACHE) g++
 CXX11=$(CCACHE) g++
