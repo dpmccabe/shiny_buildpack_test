@@ -61,13 +61,6 @@ Source: CRAN
 Version: 3.1
 Hash: 877149b42d479b93ab15d5cef46c0f1b
 
-Package: devtools
-Source: CRAN
-Version: 1.13.5
-Hash: 80061b2ad6853fd3665bf883123a1b1a
-Requires: digest, git2r, httr, jsonlite, memoise, rstudioapi, whisker,
-    withr
-
 Package: digest
 Source: CRAN
 Version: 0.6.14
@@ -158,6 +151,11 @@ Package: plogr
 Source: CRAN
 Version: 0.1-1
 Hash: fb19215402e2d9f1c7f803dcaa806fc2
+
+Package: remotes
+Source: CRAN
+Version: 1.1.1
+Hash: f4a380de905f30271c77718f4d2c2685
 
 Package: rlang
 Source: CRAN
