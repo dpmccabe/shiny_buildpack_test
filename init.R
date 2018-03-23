@@ -10,7 +10,6 @@ for (i in 1:nrow(pkgs)) {
   } else if (pkg$Source == "CRAN") {
     f <- file.path("/app/packrat/src", pkg$Package, paste0(pkg$Package, "_", pkg$Version, ".tar.gz"))
     message("...from ", f)
-    print(file.exists(f))
 
     install.packages(
       f,
@@ -20,7 +19,6 @@ for (i in 1:nrow(pkgs)) {
   } else if (pkg$Source == "github") {
     f <- file.path("/app/packrat/src", pkg$Package, paste0(pkg$GithubSha1, ".tar.gz"))
     message("...from ", f)
-    print(file.exists(f))
 
     install.packages(
       f,
