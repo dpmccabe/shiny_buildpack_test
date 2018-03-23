@@ -1,10 +1,12 @@
-Sys.setenv(CCACHE_DIR = "/app/cache", CCACHE_BASEDIR = "/app")
+dir.create("/app/cache")
+
+Sys.setenv(CCACHE_DIR = "/app/cache", CCACHE_BASEDIR = "/app", CCACHE_VERBOSE = "true")
 
 # print(getwd())
 # list.files(getwd(), all.files = T, full.names = T, include.dirs = T)
 # list.files("/usr/bin", all.files = T, full.names = T, include.dirs = T)
 
-install.packages("dplyr")
+install.packages("utf8")
 stop(0)
 
 pkgs <- as.data.frame(read.dcf("/app/packrat/packrat.lock")[-1, , drop = FALSE])
