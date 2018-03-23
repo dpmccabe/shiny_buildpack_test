@@ -1,4 +1,4 @@
-Sys.setenv(CCACHE_DIR = "/app/cache")
+Sys.setenv(CCACHE_DIR = "/app/cache", CCACHE_BASEDIR = "/app")
 
 # print(getwd())
 # list.files(getwd(), all.files = T, full.names = T, include.dirs = T)
