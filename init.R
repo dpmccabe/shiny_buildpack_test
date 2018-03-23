@@ -1,3 +1,5 @@
+Sys.setenv(CCACHE_DIR = "/app/cache")
+
 print(getwd())
 list.files(getwd(), all.files = T, full.names = T, include.dirs = T)
 list.files("/usr/bin", all.files = T, full.names = T, include.dirs = T)
