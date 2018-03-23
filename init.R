@@ -1,4 +1,5 @@
-install.packages("remotes")
+install.packages("Rcpp")
+stop(0)
 
 pkgs <- as.data.frame(read.dcf("/app/packrat/packrat.lock")[-1, , drop = FALSE])
 
