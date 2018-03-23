@@ -1,4 +1,5 @@
 dir.create("/app/cache")
+Sys.chmod("/app/cache", mode = "0777", use_umask = TRUE)
 
 Sys.setenv(CCACHE_DIR = "/app/cache", CCACHE_BASEDIR = "/app", CCACHE_VERBOSE = "true", CCACHE_LOGFILE = "/app/ccache.log")
 
