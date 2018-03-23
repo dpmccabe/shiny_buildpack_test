@@ -1,4 +1,4 @@
-p <- "/app/cache"
+p <- "/app"
 # dir.create(p)
 # Sys.chmod("/usr/local/lib/cache", mode = "0777", use_umask = TRUE)
 
