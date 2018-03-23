@@ -1,0 +1,7 @@
+CCACHE=/app/.root/usr/bin/ccache
+CC=$(CCACHE) gcc
+CXX=$(CCACHE) g++
+CXX11=$(CCACHE) g++
+CXX14=$(CCACHE) g++
+FC=$(CCACHE) gfortran
+F77=$(CCACHE) gfortran
