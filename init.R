@@ -1,5 +1,5 @@
-dir.create("/app/cache")
-Sys.chmod("/app/cache", mode = "0777", use_umask = TRUE)
+dir.create("/usr/local/lib/cache")
+Sys.chmod("/usr/local/lib/cache", mode = "0777", use_umask = TRUE)
 
 Sys.setenv(CCACHE_DIR = "/usr/local/lib/cache", CCACHE_BASEDIR = "/usr/local/lib/R/site-library", CCACHE_VERBOSE = "true", CCACHE_LOGFILE = "/app/ccache.log", CCACHE_NOHASHDIR = "true")
 
