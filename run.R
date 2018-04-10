@@ -1,3 +1,5 @@
+message("Inside run.R")
+
 library(shiny)
 
 shiny::runApp(

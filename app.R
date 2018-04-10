@@ -1,3 +1,5 @@
+message("Inside app.R")
+
 library(shiny)
 
 ui <- function(request) {
