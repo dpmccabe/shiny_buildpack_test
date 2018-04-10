@@ -1,6 +1,6 @@
 library(shiny)
 
-port <- Sys.getenv('PORT')
+port <- Sys.getenv('CUSTOM_PORT')
 
 shiny::runApp(
   appDir = getwd(),
