@@ -7,4 +7,4 @@ ui <- function(request) {
 server <- function(input, output) {
 }
 
-shinyApp(ui, server)
+shinyApp(ui, server, options = list(port = 12000))
