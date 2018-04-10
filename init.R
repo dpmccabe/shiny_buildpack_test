@@ -1,3 +1,5 @@
+install.packages("remotes")
+
 pkgs <- as.data.frame(read.dcf("/app/packrat/packrat.lock")[-1, , drop = FALSE])
 
 for (i in 1:nrow(pkgs)) {
