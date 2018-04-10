@@ -1,5 +1,4 @@
 library(shiny)
-library(dplyr)
 
 ui <- function(request) {
   fluidPage(titlePanel("Test"))
