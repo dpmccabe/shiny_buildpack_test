@@ -1,6 +1,7 @@
 message("Inside run.RR")
 
 library(shiny)
+library(RcppParallel)
 
 shiny::runApp(
   appDir = getwd(),
