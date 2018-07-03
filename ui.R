@@ -1,3 +1,5 @@
-ui <- function(request) {
-  fluidPage(titlePanel("Test"))
-}
+fluidPage(
+  fluidRow(
+    DT::dataTableOutput("table")
+  )
+)
